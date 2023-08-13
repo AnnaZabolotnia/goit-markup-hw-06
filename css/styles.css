@@ -76,6 +76,7 @@ img {
 /* ------HEADER------- */
 
 .header {
+  height: 70px;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -84,38 +85,35 @@ img {
 .header-container {
   display: flex;
   align-items: center;
+  /* margin-top: 24px;
+  margin-bottom: 24px; */
 }
 .header-navigation {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   color: #404bbf;
 }
-/* .header-navigation::after {
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
-} */
 .header-menu {
   display: flex;
   align-items: center;
   gap: 40px;
+  display: none;
 }
 .header-contacts {
   font-style: normal;
   display: flex;
-  align-items: center;
   margin-left: auto;
   padding-top: 24px;
   padding-bottom: 24px;
+  display: none;
 }
 
 .header-contacts-menu {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .header-logo {
@@ -150,7 +148,8 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
-.current {
+.current,
+.mob-current {
   position: relative;
   color: var(--color-ocean);
 }
@@ -182,6 +181,128 @@ img {
   color: var(--color-ocean);
 }
 
+/* ----------------BURGER------------------- */
+.menu-open-button {
+  margin-left: auto;
+  width: 32px;
+  height: 24px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.menu-open-icon {
+}
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+}
+.menu-close-button {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-menu-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.menu-close-icon {
+}
+.mob-menu-list {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.list {
+}
+.mob-menu-item {
+}
+.mob-menu-link {
+  color: var(--color-navy-blue);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.current {
+}
+.mob-menu-contacts {
+  margin-top: auto;
+}
+.mob-contacts-list {
+}
+.mob-contacts-item {
+}
+.mob-contacts-email {
+  color: var(--slate, #434455);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  display: block;
+}
+.mob-contacts-tel {
+  color: var(--iris, #4d5ae5);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: block;
+  width: 100%;
+}
+.mob-social-list {
+  display: flex;
+  gap: 25px;
+  margin-top: 48px;
+}
+.mob-social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--cloud);
+  background-color: var(--color-iris);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 72px;
+}
+.mob-social-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-iris);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-social-icon {
+  fill: #f4f4fd;
+}
 /* -----------------------HERO----------------------- */
 .hero {
   background-color: var(--color-navy-blue);
@@ -189,7 +310,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office-min.jpg);
+    url(../images/Dark-bg-mob-min.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -197,6 +318,17 @@ img {
   padding-bottom: 240px;
   margin: 0 auto;
   height: 432px;
+}
+@media (min-device-pixel-rativo: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-mob2x-min.jpg);
+  }
 }
 
 .hero-title {
@@ -748,8 +880,11 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   padding: 32px;
-  width: 408px;
-  min-height: 584px;
+  width: 95%;
+  max-width: 392px;
+  height: 95%;
+  max-height: 584px;
+  overflow: scroll;
   margin-top: 88px;
   margin-bottom: 8px;
   border-radius: 4px;

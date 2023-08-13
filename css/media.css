@@ -2,11 +2,56 @@
   .container {
     max-width: 426px;
   }
+  .mob-contacts-tel {
+    font-size: 36px;
+  }
+  .mob-contacts-email {
+    font-size: 20px;
+  }
+  .mob-social-list {
+    gap: 56px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
+  .header {
+    height: 72px;
+  }
+  .header-menu {
+    display: flex;
+  }
+  .header-contacts {
+    display: block;
+  }
+  .header-contacts-menu {
+  }
+  .menu-open-button,
+  .mob-menu {
+    display: none;
+  }
+
+  .hero {
+    background-color: var(--color-navy-blue);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-tab-min.jpg);
+  }
+  @media (min-device-pixel-rativo: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Dark-bg-tab2x-min.jpg);
+    }
+  }
+
   .advantages-list {
     gap: 72px 24px;
   }
@@ -78,6 +123,45 @@
   .container {
     max-width: 1158px;
   }
+
+  .header-contacts {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-left: auto;
+  }
+  .header-contacts-menu {
+    flex-direction: row;
+  }
+
+  .header-contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .header-logo {
+    margin-right: 76px;
+  }
+
+  .hero {
+    background-color: var(--color-navy-blue);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-min.jpg);
+  }
+  @media (min-device-pixel-rativo: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office2x-min.jpg);
+    }
+  }
+
   .advantages {
     background-color: var(--color-white);
     padding-top: 120px;

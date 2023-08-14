@@ -76,7 +76,7 @@ img {
 /* ------HEADER------- */
 
 .header {
-  height: 70px;
+  display: flex;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -117,6 +117,7 @@ img {
 }
 
 .header-logo {
+  padding: 25px 0;
   color: var(--color-iris);
   font-family: Raleway, sans-serif;
   font-size: 18px;
@@ -148,21 +149,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
-.current,
-.mob-current {
-  position: relative;
-  color: var(--color-ocean);
-}
-.current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  bottom: -1px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--color-ocean);
-}
+
 .header-menu-link:hover,
 .header-menu-link:focus {
   color: var(--color-ocean);
@@ -170,7 +157,7 @@ img {
 
 .header-contacts-link {
   color: var(--color-slate);
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -190,6 +177,7 @@ img {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-open-icon {
 }
@@ -302,6 +290,21 @@ img {
 }
 .mob-social-icon {
   fill: #f4f4fd;
+}
+.current,
+.mob-current {
+  position: relative;
+  color: var(--color-ocean);
+}
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -1px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-ocean);
 }
 /* -----------------------HERO----------------------- */
 .hero {
@@ -695,6 +698,7 @@ img {
 .footer-form-sub {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 .footer-label {
   width: 100%;
@@ -925,6 +929,7 @@ img {
 }
 .modal-field {
   margin-bottom: 8px;
+  width: 100%;
 }
 .modal-input {
   width: 100%;

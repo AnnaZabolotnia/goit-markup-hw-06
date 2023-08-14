@@ -11,13 +11,15 @@
   .mob-social-list {
     gap: 56px;
   }
+  .modal-input {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
   .header {
-    height: 72px;
   }
   .header-menu {
     display: flex;
@@ -125,8 +127,6 @@
   }
 
   .header-contacts {
-    padding-top: 24px;
-    padding-bottom: 24px;
     margin-left: auto;
   }
   .header-contacts-menu {

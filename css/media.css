@@ -288,7 +288,7 @@
   .footer-container {
     flex-wrap: nowrap;
     gap: 0;
-    max-width: 1128px;
+    max-width: 1158px;
   }
   .footer-text {
     width: 264px;
@@ -311,7 +311,7 @@
     margin-right: 80px;
   }
   .footer-form-sub {
-    gap: 10px;
+    gap: 24px;
     margin-right: 0%;
   }
   .footer-input {
